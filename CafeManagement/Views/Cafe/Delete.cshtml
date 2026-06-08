@@ -1,0 +1,18 @@
+﻿@model CafeManagement.Models.CafeItem
+
+@{
+    ViewData["Title"] = "Xóa món";
+}
+
+<h2>Xác nhận xóa</h2>
+
+<div class="alert alert-danger">
+    Bạn có chắc chắn muốn xóa món <b>@Model.Name</b> không?
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="/Cafe" class="btn btn-secondary">Hủy</a>
+</form>

@@ -1,0 +1,19 @@
+﻿@model CafeManagement.Models.CafeItem
+
+@{
+    ViewData["Title"] = "Chi tiết món";
+}
+
+<h2>Chi tiết món</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4>@Model.Name</h4>
+        <p><b>Loại:</b> @Model.Category</p>
+        <p><b>Giá:</b> @Model.Price.ToString("N0") VNĐ</p>
+        <p><b>Số lượng:</b> @Model.Quantity</p>
+        <p><b>Mô tả:</b> @Model.Description</p>
+    </div>
+</div>
+
+<a href="/Cafe" class="btn btn-secondary mt-3">Quay lại</a>
